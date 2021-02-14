@@ -1,0 +1,136 @@
+html {
+    font-size: 62.50%
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(150px * 4))}
+}
+  
+.reel {
+    float: left;
+    height: 50rem;
+    width: 30%;
+}
+
+.spin {
+    animation-name: x-spin;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-timing-function: linear;
+}
+
+
+.r1 {
+     animation-duration: .1s
+}
+.r2 {
+    animation-duration: .1s;
+}
+.r3 {
+    animation-duration: .1s;
+}
+
+.reel img {
+    width: 30.98rem;
+    height: 50rem;
+    display: block;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 8.6744rem;
+    border-radius: 3.098rem;
+    position: absolute;
+    border-top: 6.5rem solid rgba(255, 255, 255, 0.75);
+    border-bottom: 6.5rem solid rgba(255, 255, 255, 0.75);
+    top: -15.3rem;
+}
+
+.r2 > .still {
+    left: 33.333%;
+}
+
+.r3 > .still {
+    left: 66.666%
+}
+
+.r2 > .spinning {
+    left: 11%;
+}
+
+.r3 > .spinning {
+    left: 22%;
+}
+
+#game > img {
+    width: 100%;
+}
+
+#playAgain {
+    position: absolute;
+    width: 30%;
+    height: 25rem;
+    left: 35%;
+    font-size: 5rem;
+    border: 2px solid black;
+}
+
+#game-frame {
+    position: relative;
+    left: 25%;
+    overflow: hidden;
+    height: 50rem;
+    width: 50%;
+}
+
+#rotate {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+img[data-reel-value="eddy"] {
+    transform: rotateX(0deg) translateZ(50rem);
+    -webkit-transform: rotateX(0deg) translateZ(50rem);
+}
+img[data-reel-value="hwoarang"] {
+    transform: rotateX(60deg) translateZ(50rem);
+    -webkit-transform: rotateX(60deg) translateZ(50rem);
+}
+img[data-reel-value="kunimitsu"] {
+    transform: rotateX(120deg) translateZ(50rem);
+    -webkit-transform: rotateX(120deg) translateZ(50rem);
+}
+img[data-reel-value="king"] {
+    transform: rotateX(180deg) translateZ(50rem);
+    -webkit-transform: rotateX(180deg) translateZ(50rem);
+}
+img[data-reel-value="devil-jin"] {
+    transform: rotateX(240deg) translateZ(50rem);
+    -webkit-transform: rotateX(240deg) translateZ(50rem);
+}
+img[data-reel-value="mokujin"] {
+    transform: rotateX(300deg) translateZ(50rem);
+    -webkit-transform: rotateX(300deg) translateZ(50rem);
+}
+
+.still + .noDeg {
+    transform: none;
+    -webkit-transform: none;
+}
+
+#budget {
+    clear: left;
+}
+
+@keyframes x-spin {
+    0%    { -webkit-transform: rotateX(0deg); }
+    50%   { -webkit-transform: rotateX(180deg); }
+    100%  { -webkit-transform: rotateX(360deg); }
+  }
+
+
+
+
+/* Source: https://jsfiddle.net/DnTX6/ */
